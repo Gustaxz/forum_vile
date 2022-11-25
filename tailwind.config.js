@@ -18,7 +18,13 @@ module.exports = {
         'blue-pallete-200': "#02c39a",
         'blue-pallete-300': "#00a896",
         'blue-pallete-400': "#028090",
-        'blue-pallete-500': "#05668d"
+        'blue-pallete-500': "#05668d",
+        // random colors
+        'random-pallete-100': "#8cb369",
+        'random-pallete-200': "#f4e285",
+        'random-pallete-300': "#f4a259",
+        'random-pallete-400': "#5b8e7d",
+        'random-pallete-500': "#bc4b51"
       },
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif']

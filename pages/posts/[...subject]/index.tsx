@@ -6,6 +6,8 @@ import { Select } from "@chakra-ui/react"
 import { BiSearchAlt } from "react-icons/bi"
 import { IoIosArrowDropdownCircle } from "react-icons/io"
 
+import { SelectPostTag } from "../../../components/postsPage/SelectPostTag"
+
 export default function Home() {
 	return (
 		<div className="w-screen h-screen font-roboto">
@@ -47,8 +49,13 @@ export default function Home() {
 							<option value="perfilLevel">Perfil com maior nível</option>
 						</Select>
 					</div>
-					<div className="flex flex-col gap-5 items-end">
-						<button className="px-8 py-2 text-white font-bold bg-blue-pallete-500 rounded-xl hover:opacity-90">Criar nova discussão</button>
+					<div className="flex justify-end">
+						<div className="flex flex-col gap-3 items-center">
+							<button className="px-8 py-2 text-white font-bold bg-blue-pallete-500 rounded-xl hover:opacity-90">
+								Criar nova discussão
+							</button>
+							<SelectPostTag />
+						</div>
 					</div>
 				</div>
 			</main>
