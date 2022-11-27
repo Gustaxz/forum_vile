@@ -8,6 +8,7 @@ import { IoIosArrowDropdownCircle } from "react-icons/io"
 
 import { SelectPostTag } from "../../../components/postsPage/SelectPostTag"
 import { PostCard } from "../../../components/postsPage/PostCard"
+import { CreatePostModal } from "../../../components/postsPage/CreatePostModal"
 
 export default function Home() {
 	return (
@@ -59,9 +60,7 @@ export default function Home() {
 					</div>
 					<div className="flex justify-end">
 						<div className="flex flex-col gap-3 items-center">
-							<button className="px-8 py-2 text-white font-bold bg-blue-pallete-500 rounded-xl hover:opacity-90">
-								Criar nova discussão
-							</button>
+							<CreatePostModal />
 							<SelectPostTag />
 						</div>
 					</div>
