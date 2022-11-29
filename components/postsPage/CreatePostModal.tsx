@@ -1,3 +1,6 @@
+import { useState, useRef, MutableRefObject } from "react"
+
+
 import {
 	Modal,
 	ModalOverlay,
@@ -11,8 +14,6 @@ import { AiOutlinePlus } from "react-icons/ai"
 
 import { Tiptap } from "../editor/TipTap"
 
-import { useState } from "react"
-
 import Multiselect from "multiselect-react-dropdown"
 
 const tagsSelectItems = [
@@ -22,8 +23,15 @@ const tagsSelectItems = [
 	{ label: "Problemas", value: "problemas" },
 ]
 
+type IEditorRef = {
+	returnHTML: () => string | undefined
+}
+
 const CreatePostModal = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
+
+	const editorRef = useRef<IEditorRef>()
+
 	const [selectedImages, setSelectedImages] = useState<FileList>()
 	const [selectedOtherFiles, setSelectedOtherFiles] = useState<FileList>()
 
@@ -54,7 +62,7 @@ const CreatePostModal = () => {
 										className="w-[75%] rounded-lg p-2 outline-none border-2 border-blue-pallete-200"
 									/>
 								</div>
-								<Tiptap />
+								<Tiptap ref={editorRef}/>
 								<div className="flex gap-3 items-center">
 									<p className="font-semibold mb-1">Campo de imagens:</p>
 									<label
@@ -117,7 +125,7 @@ const CreatePostModal = () => {
 										style={{ chips: { background: "#02c39a" } }}
 									/>
 								</div>
-								<button className="absolute bottom-4 w-[18%] hover:opacity-90 py-2 font-semibold rounded-lg bg-white border-2 border-blue-pallete-200 text-blue-pallete-200 flex items-center justify-center cursor-pointe">
+								<button onClick={() => { console.log(editorRef.current?.returnHTML())}} className="absolute bottom-4 w-[18%] hover:opacity-90 py-2 font-semibold rounded-lg bg-white border-2 border-blue-pallete-200 text-blue-pallete-200 flex items-center justify-center cursor-pointe">
 									Enviar
 								</button>
 							</div>

@@ -1,3 +1,5 @@
+import {forwardRef, useImperativeHandle } from 'react';
+
 import { useEditor, EditorContent } from "@tiptap/react"
 
 import StarterKit from "@tiptap/starter-kit"
@@ -11,7 +13,10 @@ import TextStyle from "@tiptap/extension-text-style"
 import { BsTypeBold, BsTypeItalic, BsTypeStrikethrough, BsCode, BsListOl } from "react-icons/bs"
 import { BiHeading, BiAlignJustify, BiAlignLeft, BiAlignRight, BiAlignMiddle } from "react-icons/bi"
 
-const Tiptap = () => {
+
+
+// eslint-disable-next-line react/display-name
+const Tiptap = forwardRef((props, ref) => {
 	const editor = useEditor({
 		extensions: [
 			StarterKit,
@@ -44,6 +49,14 @@ const Tiptap = () => {
 			},
 		},
 	})
+
+	useImperativeHandle(ref, () => ({
+		returnHTML() {
+		  const html = editor?.getHTML()
+
+		  return html
+		}
+	  }));
 
 	return (
 		<>
@@ -152,6 +165,6 @@ const Tiptap = () => {
 			<EditorContent editor={editor} />
 		</>
 	)
-}
+})
 
 export { Tiptap }
