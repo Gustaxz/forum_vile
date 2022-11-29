@@ -45,7 +45,7 @@ const Tiptap = forwardRef((props, ref) => {
 		content: "<p>Coloque aqui o corpo do post 🚀</p>",
 		editorProps: {
 			attributes: {
-				class: "bg-white rounded-lg p-2 max-h-32 overflow-y-scroll outline-none scrollbar-thin scrollbar-thumb-blue-pallete-200 scrollbar-thumb-rounded-lg",
+				class: "bg-white rounded-lg p-2 max-h-32 overflow-y-scroll outline-none scrollbar-thin scrollbar-thumb-blue-pallete-200 scrollbar-thumb-rounded-lg border-blue-pallete-200 border-2",
 			},
 		},
 	})
@@ -54,7 +54,11 @@ const Tiptap = forwardRef((props, ref) => {
 		returnHTML() {
 		  const html = editor?.getHTML()
 
-		  return html
+		  if (editor?.isEmpty) {
+			return ""
+		  } else {
+			return html
+		  }
 		}
 	  }));
 
@@ -162,7 +166,7 @@ const Tiptap = forwardRef((props, ref) => {
 					/>
 				</div>
 			) : null}
-			<EditorContent editor={editor} />
+			<EditorContent editor={editor} placeholder=""/>
 		</>
 	)
 })
