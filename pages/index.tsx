@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link"
 
 export default function Home() {
 	return (
@@ -9,7 +10,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div>index</div>
+			<div className="flex gap-3 flex-col">
+				<p>Página principal</p>
+				<Link href="/posts/pca" >Páginas de posts</Link>
+			</div>
 		</div>
 	)
 }

@@ -45,7 +45,7 @@ const CreatePostModal = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 
 	const editorRef = useRef<IEditorRef>()
-	const multiSelectRef = useRef<Multiselect>()
+	const multiSelectRef = useRef<any>()
 
 	const [selectedImages, setSelectedImages] = useState<FileList>()
 	const [selectedOtherFiles, setSelectedOtherFiles] = useState<FileList>()
