@@ -29,10 +29,10 @@ const PostCard = () => {
 					<div className="flex gap-4">
 						<PostTag
 							backgroundColor="#F4E285"
-							textColor="#949494"
+							textColor="#BA9E15"
 							tagName="Atividades"
 						/>
-						<PostTag backgroundColor="#8CB369" textColor="white" tagName="Dúvidas" />
+						<PostTag backgroundColor="#8CB369" textColor="#3C6C12" tagName="Dúvidas" />
 					</div>
 				</div>
 				<div className="flex items-center gap-3">

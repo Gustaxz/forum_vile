@@ -6,7 +6,7 @@ interface IPostTag {
 
 const PostTag = ({ tagName, backgroundColor, textColor }: IPostTag) => {
 	return (
-		<div className=" h-8 w-24 text-sm flex items-center justify-center" style={{ backgroundColor, color: textColor }}>
+		<div className=" h-6 w-24 text-sm flex items-center justify-center rounded-xl" style={{ backgroundColor, color: textColor }}>
 			{tagName}
 		</div>
 	)
