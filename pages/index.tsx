@@ -1,7 +1,31 @@
 import Head from "next/head"
 import Link from "next/link"
 
+import { createServer } from "miragejs"
+import { useEffect } from "react"
+
+createServer({
+  routes() {
+    this.get("/api/movies", () => ({
+      movies: [
+        { id: 1, name: "Inception", year: 2010 },
+        { id: 2, name: "Interstellar", year: 2014 },
+        { id: 3, name: "Dunkirk", year: 2017 },
+      ],
+    }))
+	this.passthrough()
+  },
+})
+
 export default function Home() {
+	useEffect(() => {
+		fetch("/api/movies")
+		  .then((res) => res.json())
+		  .then((json) => {
+			console.log(json.movies)
+		  })
+	  }, [])
+
 	return (
 		<div className="w-screen h-screen">
 			<Head>
