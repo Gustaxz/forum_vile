@@ -6,6 +6,7 @@ import { ImArrowDown, ImArrowUp } from "react-icons/im"
 import { FaComments, FaAward } from "react-icons/fa"
 
 import { PostTag } from "../tags/PostTag"
+import { CreateResponseModal } from "./CreateResponseModal"
 
 const UniquePostCard = () => {
 	const likes = 11
@@ -85,15 +86,17 @@ const UniquePostCard = () => {
 						</code>
 					</div>
 					<div className="pb-3 pt-6 flex gap-4 items-center">
-                        <div className="flex gap-2 items-center cursor-pointer select-none">
-                            <FaComments size={24}/>
-                            <p className="font-bold">Comentar</p>
-                        </div>
-                        <div className="flex gap-2 items-center cursor-pointer select-none">
-                            <FaAward size={24}/>
-                            <p className="font-bold">Premiar</p>
-                        </div>
-                    </div>
+						<CreateResponseModal>
+							<div className="flex gap-2 items-center cursor-pointer select-none">
+								<FaComments size={24} />
+								<p className="font-bold">Comentar</p>
+							</div>
+						</CreateResponseModal>
+						<div className="flex gap-2 items-center cursor-pointer select-none">
+							<FaAward size={24} />
+							<p className="font-bold">Premiar</p>
+						</div>
+					</div>
 				</div>
 				<div className="px-4 py-6 flex justify-end">
 					<div className="flex flex-col gap-3">
