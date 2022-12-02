@@ -28,10 +28,14 @@ module.exports = {
       },
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif']
+      },
+      animation: {
+        'pulse-fast': 'pulse 1s cubic-bezier(0.6, 0.8, 0.6, 1) infinite'
       }
     },
   },
   plugins: [
-    require('tailwind-scrollbar')({ nocompatible: true })
+    require('tailwind-scrollbar')({ nocompatible: true }),
+    require('tailwindcss-animatecss'),
   ],
 }

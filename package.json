@@ -35,6 +35,8 @@
     "react-hook-form": "^7.39.7",
     "react-icons": "^4.6.0",
     "react-toastify": "^9.1.1",
+    "swiper": "^8.4.5",
+    "tailwindcss-animatecss": "^3.0.2",
     "typescript": "4.9.3"
   },
   "devDependencies": {

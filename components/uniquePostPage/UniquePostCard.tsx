@@ -7,6 +7,7 @@ import { FaComments, FaAward } from "react-icons/fa"
 
 import { PostTag } from "../tags/PostTag"
 import { CreateResponseModal } from "./CreateResponseModal"
+import { AwardsModal } from "./AwardsModal"
 
 const UniquePostCard = () => {
 	const likes = 11
@@ -92,10 +93,12 @@ const UniquePostCard = () => {
 								<p className="font-bold">Comentar</p>
 							</div>
 						</CreateResponseModal>
-						<div className="flex gap-2 items-center cursor-pointer select-none">
-							<FaAward size={24} />
-							<p className="font-bold">Premiar</p>
-						</div>
+						<AwardsModal>
+							<div className="flex gap-2 items-center cursor-pointer select-none">
+								<FaAward size={24} />
+								<p className="font-bold">Premiar</p>
+							</div>
+						</AwardsModal>
 					</div>
 				</div>
 				<div className="px-4 py-6 flex justify-end">
