@@ -8,6 +8,7 @@ import { FaComments, FaAward } from "react-icons/fa"
 import { PostTag } from "../tags/PostTag"
 import { CreateResponseModal } from "./CreateResponseModal"
 import { AwardsModal } from "./AwardsModal"
+import { PerfilCard } from "./PerfilCard"
 
 const UniquePostCard = () => {
 	const likes = 11
@@ -16,15 +17,17 @@ const UniquePostCard = () => {
 
 	return (
 		<>
-			<div className="h-16 w-16 bg-blue-pallete-400 rounded-full flex justify-center items-center absolute left-8">
-				<Image
-					alt="imagem de perfil"
-					src="/tmp/tony.jpg"
-					width={42}
-					height={42}
-					className="rounded-full object-contain"
-				/>
-			</div>
+			<PerfilCard>
+				<div className="h-16 w-16 bg-blue-pallete-400 rounded-full flex justify-center items-center absolute left-8 cursor-pointer">
+					<Image
+						alt="imagem de perfil"
+						src="/tmp/tony.jpg"
+						width={42}
+						height={42}
+						className="rounded-full object-contain"
+					/>
+				</div>
+			</PerfilCard>
 			<div className="w-full bg-[#fcfcfc] rounded-lg mt-4 ml-2 grid grid-cols-7 pl-16">
 				<div className="flex flex-col col-span-6">
 					<div className="pt-4 flex flex-col gap-3">
