@@ -37,6 +37,7 @@ export default function Home() {
 			<div className="flex gap-3 flex-col">
 				<p>Página principal</p>
 				<Link href="/posts/pca" >Páginas de posts</Link>
+				<Link href="/login" >Login</Link>
 			</div>
 		</div>
 	)
