@@ -20,7 +20,6 @@ const schema = yup
 			.string()
 			.required("cpf é obrigatório")
 			.test("test-invalid-cpf", "cpf inválido", (cpf) => {
-				console.log(cpf, validadeCpf.isValid(cpf!))
 				return validadeCpf.isValid(cpf!)
 			}),
 		password: yup.string().min(8, "mínimo de 8 caracteres").required("senha é obrigatória"),
@@ -28,7 +27,7 @@ const schema = yup
 	.required()
 
 export default function Login() {
-	const [passwordVisible, setPasswordVisible] = useState(false) // adicionar validação de cpf com a lib cpf-cnpj-validator
+	const [passwordVisible, setPasswordVisible] = useState(false)
 	const {
 		register,
 		handleSubmit,
