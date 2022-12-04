@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.4.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@hookform/resolvers": "^2.9.10",
     "@tiptap/extension-color": "^2.0.0-beta.204",
     "@tiptap/extension-heading": "^2.0.0-beta.204",
     "@tiptap/extension-list-item": "^2.0.0-beta.204",
@@ -38,7 +39,8 @@
     "react-toastify": "^9.1.1",
     "swiper": "^8.4.5",
     "tailwindcss-animatecss": "^3.0.2",
-    "typescript": "4.9.3"
+    "typescript": "4.9.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
